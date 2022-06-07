@@ -1,0 +1,47 @@
+body {
+  font-family: sans-serif;
+  margin: 0;
+}
+
+h1 {
+  font-family: arial;
+  font-size: 1.5rem;
+  text-transform: uppercase;
+}
+
+nav {
+  background: rgb(78, 78, 78);
+  padding: 1rem;
+}
+
+nav a {
+  color: white;
+  margin-right: 30px;
+  text-decoration: none;
+}
+
+nav a:hover {
+  color: lightgray;
+}
+
+.container {
+  max-width: 1000px;
+  margin: 0 auto;
+  padding: 1rem;
+}
+
+.container a {
+  color: black;
+  text-decoration: none;
+}
+
+.container a:hover {
+ color: gray;
+}
+
+.container p {
+ color: black;
+ font-family: arial;
+ font-size: 1.2rem;
+ text-align: justify;
+}
