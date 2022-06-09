@@ -1,0 +1,1 @@
+export const BASE_URL = "https://wordpress.relouding.eu/wp-json/wp/v2/posts";
