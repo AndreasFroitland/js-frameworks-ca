@@ -2,36 +2,47 @@ import Head from "../components/layout/Head";
 import Layout from "../components/layout/Layout";
 import axios from "axios";
 import { BASE_URL } from "../constants/api";
+import Link from 'next/link'
 
-export default function Index(props) {
-  // the log here will happen in the browser console
-  console.log(props);
+export default function Home(props) {
 
   return (
-    <Layout>
-      <Head title="Next Intro" />
+    <Layout props={props}>
+      <Head />
 
       {props.posts.map((post) => {
-        return <h3 key={post.slug}>{post.title}</h3>;
+        return <div key={post.slug}>
+          <Link href={`/details?id=${post.id}`}>
+            <h1>{post.title.rendered}</h1>
+          </Link>
+          <p>{post.date}</p></div>;
       })}
-    </Layout>
+
+    </Layout >
   );
 }
 
-export async function getServerSideProps() {
+export async function getStaticProps() {
   let posts = [];
 
   try {
     const response = await axios.get(BASE_URL);
-    console.log(response.data);
-    posts = response.data.results;
+    posts = response.data
+
+    return {
+      props: {
+        posts: posts,
+      },
+    };
   } catch (error) {
     console.log(error);
   }
 
   return {
     props: {
-        posts: posts,
-    },
-  };
+      posts: []
+    }
+  }
+
+
 }
