@@ -36,12 +36,37 @@ nav a:hover {
 }
 
 .container a:hover {
- color: gray;
+  color: gray;
 }
 
 .container p {
- color: black;
- font-family: arial;
- font-size: 1.2rem;
- text-align: justify;
+  color: black;
+  font-family: arial;
+  font-size: 1.2rem;
+  text-align: justify;
+}
+
+form {
+  max-width: 500px;
+  margin: auto;
+}
+
+input {
+  margin: 1rem auto;
+  width: 100%;
+}
+
+select {
+  margin: 1rem auto;
+  width: 100%;
+}
+
+textarea {
+  margin: 1rem auto;
+  width: 100%;
+}
+
+button {
+  display: block;
+  margin-top: 1rem;
 }

@@ -19,8 +19,8 @@ export default function Details(props) {
                 {post ? post.map((post) => {
                     return <div key={post.id}>
                         <h1>{post.title.rendered}</h1>
-                        <p>{post.date}</p>
                         <div dangerouslySetInnerHTML={{ __html: post.content.rendered }} />
+                        <p>{post.date}</p>
                     </div>;
                 }) : null}
             </div>

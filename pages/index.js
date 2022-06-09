@@ -13,7 +13,7 @@ export default function Home(props) {
       {props.posts.map((post) => {
         return <div key={post.slug}>
           <Link href={`/details?id=${post.id}`}>
-            <h1>{post.title.rendered}</h1>
+            {post.title.rendered}
           </Link>
           <p>{post.date}</p></div>;
       })}

@@ -10,9 +10,6 @@ export default function Layout({ children }) {
     <Link href="/contact">
      <a>Contact</a>
     </Link>
-    <Link href="/admin">
-     <a>Admin</a>
-    </Link>
     <Link href="/login">
      <a>Login</a>
     </Link>
