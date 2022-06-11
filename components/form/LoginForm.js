@@ -1,5 +1,4 @@
 import { useState, useContext } from "react";
-import { useHistory } from "react-router-dom";
 import { useForm } from "react-hook-form";
 import * as yup from "yup";
 import { yupResolver } from "@hookform/resolvers/yup";
@@ -23,7 +22,7 @@ export default function LoginForm() {
 		resolver: yupResolver(schema),
 	});
 
-	const [_auth, setAuth] = useContext(AuthContext);
+	const [auth, setAuth] = useContext(AuthContext);
 
 	async function onSubmit(data) {
 		setSubmitting(true);
