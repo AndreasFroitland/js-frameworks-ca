@@ -12,20 +12,18 @@ export default function Details(props) {
     post = post ? [post] : null;
 
     return (
-        <Layout>
-            <Head />
-
-            <div className="container">
-                {post ? post.map((post) => {
-                    return <div key={post.id}>
-                        <h1>{post.title.rendered}</h1>
-                        <div dangerouslySetInnerHTML={{ __html: post.content.rendered }} />
-                        <p>{post.date}</p>
-                    </div>;
-                }) : null}
-            </div>
-
-        </Layout>
+      <Layout>
+        <Head />
+          <div className="container">
+            {post ? post.map((post) => {
+        return <div key={post.id}>
+            <h1>{post.title.rendered}</h1>
+            <div dangerouslySetInnerHTML={{ __html: post.content.rendered }} />
+            <p>{post.date}</p>
+            </div>;
+        }) : null}
+          </div>
+      </Layout>
     );
 }
 

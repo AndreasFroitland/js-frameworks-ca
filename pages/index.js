@@ -9,15 +9,15 @@ export default function Home(props) {
   return (
     <Layout props={props}>
       <Head />
-
-      {props.posts.map((post) => {
-        return <div key={post.slug}>
-          <Link href={`/details?id=${post.id}`}>
-            {post.title.rendered}
-          </Link>
-          <p>{post.date}</p></div>;
+        {props.posts.map((post) => {
+          return <div class="container"><div key={post.slug}>
+            <Link href={`/details?id=${post.id}`}>
+              {post.title.rendered}
+            </Link>
+              <p>{post.date}</p>
+            </div>
+          </div>;
       })}
-
     </Layout >
   );
 }
@@ -43,6 +43,4 @@ export async function getStaticProps() {
       posts: []
     }
   }
-
-
 }

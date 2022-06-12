@@ -70,3 +70,7 @@ button {
   display: block;
   margin-top: 1rem;
 }
+
+fieldset {
+  border: none;
+}
