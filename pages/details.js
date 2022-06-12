@@ -14,15 +14,13 @@ export default function Details(props) {
     return (
       <Layout>
         <Head />
-          <div className="container">
             {post ? post.map((post) => {
-        return <div key={post.id}>
+        return <div key={post.id} className="container details">
             <h1>{post.title.rendered}</h1>
             <div dangerouslySetInnerHTML={{ __html: post.content.rendered }} />
-            <p>{post.date}</p>
+            <p>&#9998; {new Date(post.date).toLocaleString()}</p>
             </div>;
         }) : null}
-          </div>
       </Layout>
     );
 }

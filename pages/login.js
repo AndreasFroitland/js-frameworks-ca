@@ -8,8 +8,8 @@ export default function Login() {
       <Head />
         <div className="container">
           <h1>Login page</h1>
-          <LoginForm />
         </div>
+        <LoginForm />
     </Layout>
  );
 }

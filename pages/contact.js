@@ -9,7 +9,7 @@ export default function Contact() {
         <div className="container">
           <h1>Contact page</h1>
         </div>
-          <ContactForm />
+        <ContactForm />
     </Layout>
  );
 }

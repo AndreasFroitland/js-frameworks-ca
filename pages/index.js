@@ -10,11 +10,11 @@ export default function Home(props) {
     <Layout props={props}>
       <Head />
         {props.posts.map((post) => {
-          return <div class="container"><div key={post.slug}>
+          return <div className="container posts"><div key={post.slug}>
             <Link href={`/details?id=${post.id}`}>
               {post.title.rendered}
             </Link>
-              <p>{post.date}</p>
+              <p>{new Date(post.date).toLocaleString()}</p>
             </div>
           </div>;
       })}
