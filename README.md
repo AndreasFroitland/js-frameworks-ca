@@ -12,6 +12,7 @@ The website is used to post blog posts via an admin page.
 
 ## Built With
 
+![Next JS](https://img.shields.io/badge/Next-black?style=for-the-badge&logo=next.js&logoColor=white)
 - Next js
 
 ## Getting Started
